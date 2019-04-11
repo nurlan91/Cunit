@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nurlan/Desktop/EXAMM/calculator.c
+calculator.h
+/home/nurlan/Desktop/EXAMM/calculator.h
+
+/home/nurlan/Desktop/EXAMM/calculator.h
+
+/home/nurlan/Desktop/EXAMM/main.c
+stdio.h
+-
+stdlib.h
+-
+calculator.c
+/home/nurlan/Desktop/EXAMM/calculator.c
+

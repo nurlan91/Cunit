@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/nurlan.dir/main.c.o  -o ../bin/nurlan -rdynamic 

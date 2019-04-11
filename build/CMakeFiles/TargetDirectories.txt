@@ -1,0 +1,3 @@
+/home/nurlan/Desktop/EXAMM/build/CMakeFiles/edit_cache.dir
+/home/nurlan/Desktop/EXAMM/build/CMakeFiles/rebuild_cache.dir
+/home/nurlan/Desktop/EXAMM/build/CMakeFiles/nurlan.dir
