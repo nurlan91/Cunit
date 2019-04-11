@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/nuni.dir/cunit.c.o  -o ../bin/nuni -rdynamic -lcunit 

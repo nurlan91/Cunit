@@ -56,16 +56,16 @@ CMAKE_BINARY_DIR = /home/nurlan/Desktop/EXAMM/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target test
+test/fast: test
 
-.PHONY : edit_cache/fast
+.PHONY : test/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -77,6 +77,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -123,6 +134,46 @@ nurlan/fast:
 	$(MAKE) -f CMakeFiles/nurlan.dir/build.make CMakeFiles/nurlan.dir/build
 .PHONY : nurlan/fast
 
+#=============================================================================
+# Target rules for targets named nuni
+
+# Build rule for target.
+nuni: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nuni
+.PHONY : nuni
+
+# fast build rule for target.
+nuni/fast:
+	$(MAKE) -f CMakeFiles/nuni.dir/build.make CMakeFiles/nuni.dir/build
+.PHONY : nuni/fast
+
+cunit.o: cunit.c.o
+
+.PHONY : cunit.o
+
+# target to build an object file
+cunit.c.o:
+	$(MAKE) -f CMakeFiles/nuni.dir/build.make CMakeFiles/nuni.dir/cunit.c.o
+.PHONY : cunit.c.o
+
+cunit.i: cunit.c.i
+
+.PHONY : cunit.i
+
+# target to preprocess a source file
+cunit.c.i:
+	$(MAKE) -f CMakeFiles/nuni.dir/build.make CMakeFiles/nuni.dir/cunit.c.i
+.PHONY : cunit.c.i
+
+cunit.s: cunit.c.s
+
+.PHONY : cunit.s
+
+# target to generate assembly for a file
+cunit.c.s:
+	$(MAKE) -f CMakeFiles/nuni.dir/build.make CMakeFiles/nuni.dir/cunit.c.s
+.PHONY : cunit.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -156,9 +207,14 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... nurlan"
+	@echo "... nuni"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... cunit.o"
+	@echo "... cunit.i"
+	@echo "... cunit.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

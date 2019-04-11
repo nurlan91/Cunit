@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/nurlan/Desktop/EXAMM/build
 CMakeFiles/nurlan.dir/all:
 	$(MAKE) -f CMakeFiles/nurlan.dir/build.make CMakeFiles/nurlan.dir/depend
 	$(MAKE) -f CMakeFiles/nurlan.dir/build.make CMakeFiles/nurlan.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nurlan/Desktop/EXAMM/build/CMakeFiles --progress-num=1,2 "Built target nurlan"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nurlan/Desktop/EXAMM/build/CMakeFiles --progress-num=3,4 "Built target nurlan"
 .PHONY : CMakeFiles/nurlan.dir/all
 
 # Include target in all.
@@ -93,6 +93,43 @@ CMakeFiles/nurlan.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/nurlan.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/nuni.dir
+
+# All Build rule for target.
+CMakeFiles/nuni.dir/all:
+	$(MAKE) -f CMakeFiles/nuni.dir/build.make CMakeFiles/nuni.dir/depend
+	$(MAKE) -f CMakeFiles/nuni.dir/build.make CMakeFiles/nuni.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nurlan/Desktop/EXAMM/build/CMakeFiles --progress-num=1,2 "Built target nuni"
+.PHONY : CMakeFiles/nuni.dir/all
+
+# Include target in all.
+all: CMakeFiles/nuni.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/nuni.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nurlan/Desktop/EXAMM/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/nuni.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nurlan/Desktop/EXAMM/build/CMakeFiles 0
+.PHONY : CMakeFiles/nuni.dir/rule
+
+# Convenience name for target.
+nuni: CMakeFiles/nuni.dir/rule
+
+.PHONY : nuni
+
+# clean rule for target.
+CMakeFiles/nuni.dir/clean:
+	$(MAKE) -f CMakeFiles/nuni.dir/build.make CMakeFiles/nuni.dir/clean
+.PHONY : CMakeFiles/nuni.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/nuni.dir/clean
 
 .PHONY : clean
 
